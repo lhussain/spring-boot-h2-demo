@@ -21,7 +21,7 @@ public class CustomerController {
         this.customerService = customerService;
     }
 
-    @RequestMapping(value = "/customers", produces = "application/json", method=RequestMethod.POST)
+    @RequestMapping(value = "/customers", produces = "application/json", method = RequestMethod.POST)
     public ResponseEntity<Customer> create(@RequestBody Customer customer) {
         customerService.createOrUpdateCustomer(customer);
 
@@ -30,14 +30,14 @@ public class CustomerController {
                 .body(customer);
     }
 
-    @RequestMapping(value = "/customers", produces = "application/json", method=RequestMethod.GET)
+    @RequestMapping(value = "/customers", produces = "application/json", method = RequestMethod.GET)
     public ResponseEntity<List<Customer>> findAll() {
         return ResponseEntity.ok()
                 .contentType(MediaType.APPLICATION_JSON)
                 .body(customerService.getAll());
     }
 
-    @RequestMapping(value = "/customers/{id}", produces = "application/json", method=RequestMethod.GET)
+    @RequestMapping(value = "/customers/{id}", produces = "application/json", method = RequestMethod.GET)
     public ResponseEntity<Customer> findById(@PathVariable int id) {
         Customer customer = customerService.getCustomerById(id);
 
@@ -52,7 +52,7 @@ public class CustomerController {
         }
     }
 
-    @RequestMapping(value = "/customers/{id}", produces = "application/json", method=RequestMethod.DELETE)
+    @RequestMapping(value = "/customers/{id}", produces = "application/json", method = RequestMethod.DELETE)
     public ResponseEntity<String> deleteById(@PathVariable int id) {
         customerService.deleteCustomerById(id);
 
@@ -61,7 +61,7 @@ public class CustomerController {
                 .body("Deleted customer with id: " + id);
     }
 
-    @RequestMapping(value = "/customers", produces = "application/json", method=RequestMethod.PUT)
+    @RequestMapping(value = "/customers", produces = "application/json", method = RequestMethod.PUT)
     public ResponseEntity<Customer> update(@RequestBody Customer customer) {
         customerService.createOrUpdateCustomer(customer);
 
