@@ -48,7 +48,6 @@ public class CustomerControllerTest {
                 .andExpect(status().isCreated())
                 .andExpect(content()
                         .contentTypeCompatibleWith(MediaType.APPLICATION_JSON));
-
     }
 
     @Test
@@ -59,8 +58,6 @@ public class CustomerControllerTest {
                 .content(getCustomerUpdateRequest())
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
-
-
     }
 
     @Test
@@ -72,7 +69,6 @@ public class CustomerControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content()
                         .contentTypeCompatibleWith(MediaType.APPLICATION_JSON));
-
     }
 
     private String getCustomerRequest() {
@@ -83,7 +79,6 @@ public class CustomerControllerTest {
                 "   \"organizationName\" : \"JoeBloggs2\", " +
                 "   \"netWorth\" : 100" +
                 "}";
-
     }
 
     private String getCustomerUpdateRequest() {
@@ -94,6 +89,5 @@ public class CustomerControllerTest {
                 "   \"organizationName\" : \"JoeBloggs2\", " +
                 "   \"netWorth\" : 200" +
                 "}";
-
     }
 }

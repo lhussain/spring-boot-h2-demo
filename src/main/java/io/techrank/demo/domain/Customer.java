@@ -14,7 +14,6 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @Builder
 public class Customer {
-
     @Id
     private int id;
 
