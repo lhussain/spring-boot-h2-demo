@@ -23,7 +23,7 @@ public class CustomerServiceTest {
     @Autowired
     private CustomerService customerService;
 
-    @Test()
+    @Test
     public void test_getAll_existing_customers() {
         // when
         List<Customer> customers =  customerService.getAll();
@@ -34,7 +34,7 @@ public class CustomerServiceTest {
         assertExistingUsers(customers);
     }
 
-    @Test()
+    @Test
     public void test_getCustomerById() {
         // when
        Customer customer =  customerService.getCustomerById(1);
@@ -49,7 +49,7 @@ public class CustomerServiceTest {
     }
 
 
-    @Test()
+    @Test
     public void test_create_new_customer() {
         // given
         createNewCustomer(121);
@@ -69,7 +69,7 @@ public class CustomerServiceTest {
         assertEquals(100, customers.get(8).getNetWorth());
     }
 
-    @Test()
+    @Test
     public void test_update_new_customer() {
         // given
         int id = 121;
@@ -91,7 +91,7 @@ public class CustomerServiceTest {
         assertEquals(200, customer.getNetWorth());
     }
 
-    @Test()
+    @Test
     public void test_delete_new_customer() {
         // given
         int id = 1;
