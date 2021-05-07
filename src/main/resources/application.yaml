@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: "Demo"
+
+dev:
+  name: test-YAML-lomanskee
+  environment: testing
+  enabled: false
+  servers:
+    - www.abc.test.com
+    - www.xyz.test.com
