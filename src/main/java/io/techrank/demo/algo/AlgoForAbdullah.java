@@ -7,7 +7,7 @@ public class AlgoForAbdullah {
 
     private static final int PERCENT_MULT = 100;
 
-    private List<Long> doDemo(double ref,  double[] tokyo, double[] london) {
+    private List<Long> doPercentageCalculation(double ref,  double[] tokyo, double[] london) {
 
         List<Long> percentages = new ArrayList<>();
 
@@ -35,7 +35,7 @@ public class AlgoForAbdullah {
 
         AlgoForAbdullah afa = new AlgoForAbdullah();
 
-        List<Long> percentages = afa.doDemo(reference, tokyo, london);
+        List<Long> percentages = afa.doPercentageCalculation(reference, tokyo, london);
 
         percentages.forEach(percent -> System.out.println(percent));
     }
